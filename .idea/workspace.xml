@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9be6966-dbfb-4dfb-b158-281c0bcba4de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/exercises/exercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercises.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/machine_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/machine_learning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,25 +61,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="1249" />
-          <entry key="py" value="6626" />
+          <entry key="py" value="8090" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1249" />
-          <entry key="Python" value="6626" />
+          <entry key="Python" value="8090" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="5" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -101,11 +102,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/exercises.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="285">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1538934452147" expanded="true" signature="72:448" ph="..." />
+                <marker date="1538945919011" expanded="true" signature="360:1542" ph="..." />
+                <marker date="1538945919011" expanded="true" signature="698:1542" ph="..." />
               </folding>
             </state>
           </provider>
@@ -114,12 +116,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/machine_learning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="128" column="51" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
+            <state relative-caret-position="275">
+              <caret line="155" column="28" lean-forward="true" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1538936054757" expanded="true" signature="103:156" ph="..." />
-                <marker date="1538936054757" expanded="true" signature="3029:3909" ph="..." />
+                <marker date="1538947896047" expanded="true" signature="135:188" ph="..." />
+                <marker date="1538947896047" expanded="true" signature="3935:3941" ph="..." />
+                <marker date="1538947896047" expanded="true" signature="5003:5009" ph="..." />
+                <marker date="1538947896047" expanded="true" signature="5024:5025" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/matrixlib/defmatrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="406">
               <caret line="209" selection-start-line="209" selection-end-line="209" />
             </state>
           </provider>
@@ -137,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/math.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="-1330">
               <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
@@ -288,9 +292,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/exercises/exercises.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/library/machine_learning.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/machine_learning.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -314,17 +323,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1330">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
@@ -335,32 +344,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/matrixlib/defmatrix.py">
+    <entry file="file://$PROJECT_DIR$/exercises/exercises.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="209" selection-start-line="209" selection-end-line="209" />
+        <state relative-caret-position="285">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1538945919011" expanded="true" signature="360:1542" ph="..." />
+            <marker date="1538945919011" expanded="true" signature="698:1542" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/exercises.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/matrixlib/defmatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1538934452147" expanded="true" signature="72:448" ph="..." />
-          </folding>
+        <state relative-caret-position="406">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/machine_learning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="128" column="51" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
+        <state relative-caret-position="275">
+          <caret line="155" column="28" lean-forward="true" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1538936054757" expanded="true" signature="103:156" ph="..." />
-            <marker date="1538936054757" expanded="true" signature="3029:3909" ph="..." />
+            <marker date="1538947896047" expanded="true" signature="135:188" ph="..." />
+            <marker date="1538947896047" expanded="true" signature="3935:3941" ph="..." />
+            <marker date="1538947896047" expanded="true" signature="5003:5009" ph="..." />
+            <marker date="1538947896047" expanded="true" signature="5024:5025" ph="..." />
           </folding>
         </state>
       </provider>

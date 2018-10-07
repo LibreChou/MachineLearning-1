@@ -2,6 +2,7 @@ from enum import Enum
 from library.math import *
 from math import *
 import numpy
+import matplotlib.pyplot as plt
 
 
 class LRTypes(Enum):
@@ -135,6 +136,8 @@ class LinearRegression(object):
 
     def solve(self, x):
         # Arrange
+        if not isinstance(x, (list, numpy.ndarray)):
+            x = [x]
         input_mx = self.format_solve_input(x)
 
         # Initial checks
@@ -147,3 +150,21 @@ class LinearRegression(object):
 
         # The matrix's first item is the result
         return res.matrix.item((0, 0))
+
+    def plot(self):
+        mx = TeaMatrix(self.x)
+        mxt = mx.transpose()
+        yres = []
+        for i in range(0, mxt.get_rows):
+            yres.append(self.solve(numpy.array(mxt.matrix[i])[0]))
+        try:
+            plt.style.use('seaborn-whitegrid')
+            plt.plot(self.x, numpy.matrix(self.y), 'ro')
+            plt.plot(self.x, numpy.matrix(yres), 'bo')
+
+            plt.show()
+        except ValueError:
+            print("This module can only plot for 2 dimensional arrays!")
+        finally:
+            print("The func output will be plotted bellow:")
+            print(yres)
