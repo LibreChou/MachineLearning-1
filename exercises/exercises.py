@@ -9,7 +9,7 @@ def choose_lr_type():
     elif lrtype == 2:
         lrtype = LRTypes.Quadratic
     elif lrtype == 3:
-        print("hey")
+        lrtype = LRTypes.Weighted
     else:
         raise ValueError("Invalid linear regression type!")
     return lrtype

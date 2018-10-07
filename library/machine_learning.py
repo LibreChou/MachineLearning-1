@@ -18,15 +18,15 @@ class LinearRegression(object):
         self.x = numpy.matrix(x, numpy.float64)
         self.y = numpy.array(y, numpy.float64)
         self.weights = numpy.empty(len(self.y), numpy.float64)
+        for i in range(0, len(self.weights)):
+            self.weights[i] = 1.0
         self.type = lrtype
 
         # Initial checks
         if self.x.shape[1] != len(y) or self.x.shape[1] == 0 or len(y) == 0:
             raise ValueError("Bad Size inputs!")
 
-        # Create the Linear Regression according with the type specified
-        if lrtype == LRTypes.Linear:
-            print("Hey")
+        # Creates the linear regression context
         self.linear()
 
     def format_input(self):
@@ -37,8 +37,8 @@ class LinearRegression(object):
         m = self.x.shape[1]
 
         # Formats input according to regression type
-        # Linear Regression -> [1, x]
-        if self.type == LRTypes.Linear:
+        # Linear Regression -> [1, x1, x2...]
+        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted:
             x = numpy.empty((m, n + 1), numpy.float64)
             y = numpy.empty((len(self.y), 1), numpy.float64)
             for i in range(0, m):
@@ -67,7 +67,7 @@ class LinearRegression(object):
 
         # Formats input to solve system according to type
         # Linear Regression -> [1, x...]
-        if self.type == LRTypes.Linear:
+        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted:
             input_mx = numpy.empty((1, len(x) + 1), numpy.float64)
             for i in range(0, len(x) + 1):
                 if i == 0:
@@ -84,21 +84,31 @@ class LinearRegression(object):
 
         return input_mx
 
-    def linear(self):
+    def calcBetas(self):
         # Gets formatted input
         x, y = self.format_input()
 
         mx = TeaMatrix(x)
         my = TeaMatrix(y)
+        mw = TeaMatrix(numpy.empty((len(self.weights), len(self.weights)), numpy.float64))
+
+        # Creates the W matrix to multiply the weights
+        for i in range(0, len(self.weights)):
+            for j in range(0, len(self.weights)):
+                mw.matrix.itemset((i, j), 0.0)
+            mw.matrix.itemset((i, i), self.weights.item(i))
 
         # Transposes X
         mxt = mx.transpose()
 
-        # Calculates X^2
-        mx2 = mxt.multiply(mx)
+        # Calculates X^2 with weights
+        mxtw = mxt.multiply(mw)
 
-        # Multiples transposed X by Y
-        mxty = mxt.multiply(my)
+        # Calculates XTW * X
+        mx2 = mxtw.multiply(mx)
+
+        # Multiples weighted transposed X by Y
+        mxty = mxtw.multiply(my)
 
         # Inverts X^2
         mx2i = mx2.invert()
@@ -106,8 +116,19 @@ class LinearRegression(object):
         # Stores Results in the betas matrix
         self.betas = mx2i.multiply(mxty)
 
+    def linear(self):
+
+        self.calcBetas()
+
+        # Calculates the new weights
         if self.type == LRTypes.Weighted:
-            w = TeaMatrix(numpy.empty(()))
+            for i in range(0, len(self.y)):
+                current = self.y.item(i)
+                value = 1.0 / abs(current - self.solve([self.x.item((0, i))]))
+                self.weights.itemset(i, value)
+            # Re-calculates new betas for the new weights
+            self.calcBetas()
+
 
     def solve(self, x):
         # Arrange
