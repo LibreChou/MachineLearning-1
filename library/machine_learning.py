@@ -17,6 +17,7 @@ class LinearRegression(object):
         self.betas = TeaMatrix(numpy.empty((0, 0)))
         self.x = numpy.matrix(x, numpy.float64)
         self.y = numpy.array(y, numpy.float64)
+        # Initializes with "no weights" (weights == 1.0)
         self.weights = numpy.empty(len(self.y), numpy.float64)
         for i in range(0, len(self.weights)):
             self.weights[i] = 1.0
@@ -117,18 +118,20 @@ class LinearRegression(object):
         self.betas = mx2i.multiply(mxty)
 
     def linear(self):
-
         self.calcBetas()
 
         # Calculates the new weights
         if self.type == LRTypes.Weighted:
             for i in range(0, len(self.y)):
                 current = self.y.item(i)
-                value = 1.0 / abs(current - self.solve([self.x.item((0, i))]))
+                x = []
+                # builds the X vector to the solution
+                for j in range(0, self.x.shape[0]):
+                    x.append(self.x.item(j, i))
+                value = 1.0 / abs(current - self.solve(x))
                 self.weights.itemset(i, value)
             # Re-calculates new betas for the new weights
             self.calcBetas()
-
 
     def solve(self, x):
         # Arrange
