@@ -13,10 +13,11 @@ class LRTypes(Enum):
 class LinearRegression(object):
 
     def __init__(self, x, y, lrtype):
-        # Initializa properties
+        # Initialize properties
         self.betas = TeaMatrix(numpy.empty((0, 0)))
         self.x = numpy.matrix(x, numpy.float64)
         self.y = numpy.array(y, numpy.float64)
+        self.weights = numpy.empty(len(self.y), numpy.float64)
         self.type = lrtype
 
         # Initial checks
