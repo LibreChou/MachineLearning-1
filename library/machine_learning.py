@@ -4,7 +4,6 @@ from math import *
 import numpy
 import matplotlib.pyplot as plt
 
-
 class LRTypes(Enum):
     Linear = 1
     Quadratic = 2
@@ -165,6 +164,5 @@ class LinearRegression(object):
             plt.show()
         except ValueError:
             print("This module can only plot for 2 dimensional arrays!")
-        finally:
-            print("The func output will be plotted bellow:")
-            print(yres)
+        print("The func output will be plotted bellow:")
+        print(yres)
