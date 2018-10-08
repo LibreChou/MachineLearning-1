@@ -4,7 +4,7 @@ import re
 
 def choose_lr_type(inp_size):
     lrtype = 0
-    if inp_size == 1:
+    if inp_size == 1 or inp_size == 2:
         lrtype = int(input("Choose a type for the Linear Regression: \n1 - Linear\n2 - Weighted\n3 - Quadratic\nChoice: "))
     else:
         lrtype = int(input("Choose a type for the Linear Regression: \n1 - Linear\n2 - Weighted\nChoice: "))
@@ -14,7 +14,7 @@ def choose_lr_type(inp_size):
         lrtype = LRTypes.Linear
     elif lrtype == 2:
         lrtype = LRTypes.Weighted
-    elif lrtype == 3 and inp_size == 1:
+    elif lrtype == 3:
         lrtype = LRTypes.Quadratic
     else:
         raise ValueError("Invalid linear regression type!")
@@ -26,7 +26,7 @@ def ex1_get_inputs():
     y = []
 
     # Converts input arrays
-    nx = int(input("Type the number of X elements (dimensions): "))
+    nx = int(input("Type the number of X axis (dimensions in X): "))
 
     # Checks if size if valid
     if nx < 1:
@@ -61,8 +61,22 @@ def ex1():
     # Chooses the type of Linear Regression
     lrtype = choose_lr_type(inp_size)
 
-    # Creates the Linear Regression context
-    lr = LinearRegression(x, y, lrtype)
+    # Case its square and 3 dimensions
+    if inp_size == 2 or LinearRegression == LRTypes.Quadratic:
+        x.append([])
+        for i in range(0, len(x[0])):
+            x[2].append(pow(x[0][i], 2))
+        x.append([])
+        for i in range(0, len(x[0])):
+            x[3].append(pow(x[1][i], 2))
+        x.append([])
+        for i in range(0, len(x[0])):
+            x[4].append(2 * x[0][i] * x[1][i])
+        # Creates the Linear Regression context
+        lr = LinearRegression(x, y, lrtype, True)
+    else:
+        # Creates the Linear Regression context
+        lr = LinearRegression(x, y, lrtype)
 
     # "Interactive" menu
     while valid_operation:
@@ -70,14 +84,39 @@ def ex1():
         if opt == 1:
             xstr = input("Input the X values in comma-separated form (e.g.: 1.0, 2.0, 3.0): ").split(',')
             values = []
-            for s in xstr:
-                values.append(float(s))
-            print("Answer: " + lr.solve(values).__str__())
+            resp = ""
+            if inp_size == 2 and lrtype == LRTypes.Quadratic:
+                values = [float(xstr[0]), float(xstr[1]), pow(float(xstr[0]), 2), pow(float(xstr[1]), 2), 2.0 * float(xstr[0])* float(xstr[1])]
+                resp = lr.solve(values, True).__str__()
+            else:
+                for s in xstr:
+                    values.append(float(s))
+                resp = lr.solve(values).__str__()
+            print("Answer: " + resp)
         elif opt == 2:
-            lr.plot()
+            if inp_size == 2 and lrtype == LRTypes.Quadratic:
+                lr.plot(True)
+            else:
+                lr.plot()
         elif opt == 3:
             lrtype = choose_lr_type(inp_size)
-            lr = LinearRegression(x, y, lrtype)
+            force = False
+            if inp_size == 2 and len(x) == 2 and lrtype == LRTypes.Quadratic:
+                x.append([])
+                for i in range(0, len(x[0])):
+                    x[2].append(pow(x[0][i], 2))
+                x.append([])
+                for i in range(0, len(x[0])):
+                    x[3].append(pow(x[1][i], 2))
+                x.append([])
+                for i in range(0, len(x[0])):
+                    x[4].append(2 * x[0][i] * x[1][i])
+                force = True
+            elif inp_size == 2 and len(x) == 5 and lrtype != LRTypes.Quadratic:
+                x.pop(4)
+                x.pop(3)
+                x.pop(2)
+            lr = LinearRegression(x, y, lrtype, force)
         else:
             print("See yah!!")
             valid_operation = False

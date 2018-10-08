@@ -12,7 +12,7 @@ class LRTypes(Enum):
 
 class LinearRegression(object):
 
-    def __init__(self, x, y, lrtype):
+    def __init__(self, x, y, lrtype, force = False):
         # Initialize properties
         self.betas = TeaMatrix(numpy.empty((0, 0)))
         self.x = numpy.matrix(x, numpy.float64)
@@ -28,9 +28,9 @@ class LinearRegression(object):
             raise ValueError("Bad Size inputs!")
 
         # Creates the linear regression context
-        self.linear()
+        self.linear(force)
 
-    def format_input(self):
+    def format_input(self, force = False):
         # Arrange
         x = numpy.empty((0, 0), numpy.float64)
         y = numpy.empty((0, 0), numpy.float64)
@@ -39,7 +39,7 @@ class LinearRegression(object):
 
         # Formats input according to regression type
         # Linear Regression -> [1, x1, x2...]
-        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted:
+        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted or force:
             x = numpy.empty((m, n + 1), numpy.float64)
             y = numpy.empty((len(self.y), 1), numpy.float64)
             for i in range(0, m):
@@ -62,13 +62,13 @@ class LinearRegression(object):
                 y.itemset((i, 0), self.y.item(i))
         return x, y
 
-    def format_solve_input(self, x):
+    def format_solve_input(self, x, force = False):
         # Arranges
         input_mx = None
 
         # Formats input to solve system according to type
         # Linear Regression -> [1, x...]
-        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted:
+        if self.type == LRTypes.Linear or self.type == LRTypes.Weighted or force:
             input_mx = numpy.empty((1, len(x) + 1), numpy.float64)
             for i in range(0, len(x) + 1):
                 if i == 0:
@@ -85,9 +85,9 @@ class LinearRegression(object):
 
         return input_mx
 
-    def calcBetas(self):
+    def calcBetas(self, force = False):
         # Gets formatted input
-        x, y = self.format_input()
+        x, y = self.format_input(force)
 
         mx = TeaMatrix(x)
         my = TeaMatrix(y)
@@ -117,8 +117,8 @@ class LinearRegression(object):
         # Stores Results in the betas matrix
         self.betas = mx2i.multiply(mxty)
 
-    def linear(self):
-        self.calcBetas()
+    def linear(self, force = False):
+        self.calcBetas(force)
 
         # Calculates the new weights
         if self.type == LRTypes.Weighted:
@@ -131,13 +131,13 @@ class LinearRegression(object):
                 value = 1.0 / abs(current - self.solve(x))
                 self.weights.itemset(i, value)
             # Re-calculates new betas for the new weights
-            self.calcBetas()
+            self.calcBetas(force)
 
-    def solve(self, x):
+    def solve(self, x, force = False):
         # Arrange
         if not isinstance(x, (list, numpy.ndarray)):
             x = [x]
-        input_mx = self.format_solve_input(x)
+        input_mx = self.format_solve_input(x, force)
 
         # Initial checks
         if input_mx.shape[1] != self.betas.get_rows:
@@ -150,12 +150,12 @@ class LinearRegression(object):
         # The matrix's first item is the result
         return res.matrix.item((0, 0))
 
-    def plot(self):
+    def plot(self, force = False):
         mx = TeaMatrix(self.x)
         mxt = mx.transpose()
         yres = []
         for i in range(0, mxt.get_rows):
-            yres.append(self.solve(numpy.array(mxt.matrix[i])[0]))
+            yres.append(self.solve(numpy.array(mxt.matrix[i])[0], force))
         try:
             plt.style.use('seaborn-whitegrid')
             plt.plot(self.x, numpy.matrix(self.y), 'ro')
