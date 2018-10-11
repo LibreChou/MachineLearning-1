@@ -17,3 +17,8 @@ Is simple and easy to run this code. You just need to follow few steps that are 
 You are ready to go now :+1:!
 
 I hope you enjoy and learn with the beauty of Machine Learning as much as I did :punch:!
+
+## Contents
+The algorithms contained in this project are:
+- [x] Linear Regression
+- [ ] Principal Components Analysis (PCA)

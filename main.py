@@ -2,7 +2,7 @@ from exercises.exercises import *
 
 
 def main():
-     ex1()
+     # ex1()
 
 
 main()
