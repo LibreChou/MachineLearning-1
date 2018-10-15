@@ -21,4 +21,4 @@ I hope you enjoy and learn with the beauty of Machine Learning as much as I did 
 ## Contents
 The algorithms contained in this project are:
 - [x] Linear Regression
-- [ ] Principal Components Analysis (PCA)
+- [x] Principal Components Analysis (PCA)

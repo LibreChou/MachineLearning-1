@@ -12,7 +12,13 @@ def ex2():
     pca1.set_precision(precision)
 
     print("==== US Census ===")
-
+    print("EigenVectors:")
+    print(pca1.eigen_vectors)
+    print("EigenValues:")
+    print(pca1.eigen_values)
+    print("Feature Vector:")
+    print(pca1.feature_vector)
+    print("Original data:")
     print(pca1.get_original_data())
 
     # Alps Water
@@ -24,7 +30,13 @@ def ex2():
     pca2.set_precision(precision)
 
     print("==== Alps Water ===")
-
+    print("EigenVectors:")
+    print(pca2.eigen_vectors)
+    print("EigenValues:")
+    print(pca2.eigen_values)
+    print("Feature Vector:")
+    print(pca2.feature_vector)
+    print("Original data:")
     print(pca2.get_original_data())
 
     # Books x Grades
@@ -37,5 +49,11 @@ def ex2():
     pca3.set_precision(precision)
 
     print("==== Books x Grades ===")
-
+    print("EigenVectors:")
+    print(pca3.eigen_vectors)
+    print("EigenValues:")
+    print(pca3.eigen_values)
+    print("Feature Vector:")
+    print(pca3.feature_vector)
+    print("Original data:")
     print(pca3.get_original_data())
