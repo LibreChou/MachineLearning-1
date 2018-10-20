@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9be6966-dbfb-4dfb-b158-281c0bcba4de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/ex3.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ex3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/LDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/LDA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,19 +105,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="113" />
-          <entry key="py" value="12445" />
+          <entry key="py" value="13425" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="113" />
-          <entry key="Python" value="12445" />
+          <entry key="Python" value="13425" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="17" />
+          <entry key="py" value="18" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -127,7 +125,7 @@
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="17" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -150,30 +148,40 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/LDA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="360">
+              <caret line="132" column="65" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1539994230501" expanded="true" signature="53:54" ph="..." />
-                <marker date="1539994230501" expanded="true" signature="72:77" ph="..." />
-                <marker date="1539994230501" expanded="true" signature="1165:1171" ph="..." />
-                <marker date="1539994230501" expanded="true" signature="1191:1200" ph="..." />
+                <marker date="1539996689477" expanded="true" signature="53:54" ph="..." />
+                <marker date="1539996689477" expanded="true" signature="72:77" ph="..." />
+                <marker date="1539996689477" expanded="true" signature="1165:1171" ph="..." />
+                <marker date="1539996689477" expanded="true" signature="1191:1200" ph="..." />
+                <marker date="1539996689477" expanded="true" signature="3090:3099" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/PCA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-800">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/ex3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="270">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1539994322435" expanded="true" signature="138:143" ph="..." />
+                <marker date="1539995419220" expanded="true" signature="138:143" ph="..." />
               </folding>
             </state>
           </provider>
@@ -219,8 +227,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/library/PCA.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/library/LDA.py" />
         <option value="$PROJECT_DIR$/exercises/ex3.py" />
+        <option value="$PROJECT_DIR$/library/LDA.py" />
       </list>
     </option>
   </component>
@@ -380,8 +388,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/library/LDA.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="24" />
+          <line>123</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -536,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/PCA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -553,27 +554,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/LDA.py">
+    <entry file="file://$PROJECT_DIR$/exercises/ex3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="270">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1539994230501" expanded="true" signature="53:54" ph="..." />
-            <marker date="1539994230501" expanded="true" signature="72:77" ph="..." />
-            <marker date="1539994230501" expanded="true" signature="1165:1171" ph="..." />
-            <marker date="1539994230501" expanded="true" signature="1191:1200" ph="..." />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1539995419220" expanded="true" signature="138:143" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/ex3.py">
+    <entry file="file://$PROJECT_DIR$/library/PCA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="-800">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/LDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="132" column="65" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1539994322435" expanded="true" signature="138:143" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1539996689477" expanded="true" signature="53:54" ph="..." />
+            <marker date="1539996689477" expanded="true" signature="72:77" ph="..." />
+            <marker date="1539996689477" expanded="true" signature="1165:1171" ph="..." />
+            <marker date="1539996689477" expanded="true" signature="1191:1200" ph="..." />
+            <marker date="1539996689477" expanded="true" signature="3090:3099" ph="..." />
           </folding>
         </state>
       </provider>

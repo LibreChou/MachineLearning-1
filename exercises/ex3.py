@@ -16,4 +16,5 @@ def ex3():
     l1 = LDA(array, classes)
     print(np.matrix(l1.scatter_between))
     print(np.matrix(l1.scatter_within))
+    l1.plot_separation()
     #print(l1.classes)
