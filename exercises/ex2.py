@@ -48,7 +48,7 @@ def ex2():
 
     pca3.set_precision(precision)
 
-    print("==== Books x Grades ===")
+    print("==== PCA ===")
     print("EigenVectors:")
     print(pca3.eigen_vectors)
     print("EigenValues:")
@@ -57,3 +57,6 @@ def ex2():
     print(pca3.feature_vector)
     print("Original data:")
     print(pca3.get_original_data())
+
+
+
