@@ -22,3 +22,4 @@ I hope you enjoy and learn with the beauty of Machine Learning as much as I did 
 The algorithms contained in this project are:
 - [x] Linear Regression
 - [x] Principal Components Analysis (PCA)
+- [x] Linear Discriminant Analysis (LDA)

@@ -40,6 +40,7 @@ class LDA(object):
                 res.itemset((i, j), 0.0)
         return res
 
+    # Gets scatter between matrix
     def scatter_b(self):
         sb = self.empty_mx(self.dimensions, self.dimensions)
 
@@ -67,6 +68,7 @@ class LDA(object):
 
         return sb.tolist()
 
+    # Gets scatter within matrix
     def scatter_w(self):
         sw = self.empty_mx(self.dimensions, self.dimensions)
 

@@ -5,6 +5,11 @@ import json
 
 
 def get_iris_dataset():
+    # test data
+    # array = [[1.0, 2.0, 3.0, 4.0, 5.0, 1.0, 2.0, 3.0, 3.0, 5.0, 6.0],
+    #         [2.0, 3.0, 3.0, 5.0, 5.0, 0.0, 1.0, 1.0, 2.0, 3.0, 5.0]]
+    # classes = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
+
     # Fills inputs
     array = []
     classes = []
@@ -71,13 +76,10 @@ def plot_iris_exercise(array, classes, title, xlabel, ylabel):
     plt.show()
 
 def ex3():
-
+    # Gets dataset
     array, classes = get_iris_dataset()
-    #array = [[1.0, 2.0, 3.0, 4.0, 5.0, 1.0, 2.0, 3.0, 3.0, 5.0, 6.0],
-    #         [2.0, 3.0, 3.0, 5.0, 5.0, 0.0, 1.0, 1.0, 2.0, 3.0, 5.0]]
-    #classes = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
 
-
+    # Calcs dataset
     l1 = LDA(array, classes)
     print(np.matrix(l1.scatter_between))
     print(np.matrix(l1.scatter_within))
@@ -91,15 +93,18 @@ def ex3():
     # applies pca
     pca1 = PCA(array)
     pca1.set_precision(.93)
-
+    print(pca1.eigen_values)
+    print(pca1.eigen_vectors)
     fdata = pca1.get_final_data().tolist()
     plot_iris_exercise(fdata, classes, "PCA aplicado ao iris dataset", "PC 1", "PC 2")
 
+    print("==== PCA + LDA ====")
     l2 = LDA(fdata, classes)
     print(np.matrix(l2.scatter_between))
     print(np.matrix(l2.scatter_within))
     print(l2.eigen_values)
     print(l2.eigen_vectors)
+    print(l2.get_feature_vector(2))
 
     data2 = np.linalg.pinv(l2.get_feature_vector(2)).dot(l2.samples).tolist()
     plot_iris_exercise(array, classes, "PCA + LDA", "DC 1", "DC 2")
