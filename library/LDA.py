@@ -1,5 +1,5 @@
 import numpy as np
-
+import sys
 
 
 class LDA(object):
@@ -28,8 +28,14 @@ class LDA(object):
         self.scatter_between = self.scatter_b()
         self.scatter_within = self.scatter_w()
 
-        # Solves eigensystem
+
         self.eigen_values, self.eigen_vectors = np.linalg.eig(np.linalg.inv(self.scatter_within).dot(self.scatter_between))
+
+        for i in range(0, len(self.eigen_values)):
+            if isinstance(self.eigen_values[i], complex):
+                self.eigen_values, self.eigen_vectors = np.linalg.eigh(np.linalg.inv(self.scatter_within).dot(self.scatter_between))
+                break
+
 
     # Creates 0.0 filled matrix
     @staticmethod

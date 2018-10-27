@@ -23,3 +23,4 @@ The algorithms contained in this project are:
 - [x] Linear Regression
 - [x] Principal Components Analysis (PCA)
 - [x] Linear Discriminant Analysis (LDA)
+- [x] K-Means

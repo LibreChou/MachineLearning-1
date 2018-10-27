@@ -66,6 +66,16 @@ def get_iris_dataset():
 
     return array, classes
 
+def load_wine_data():
+    f = open("inputs/wine.txt", "r")
+    content = f.read()
+    content = content.split("\n")
+    content = [cont.split(",") for cont in content]
+    classes = [int(cont[0]) for cont in content]
+    data = [[float(line[i]) for i in range(1, len(line))] for line in content]
+    data = np.matrix(data).transpose().tolist()
+    return data, classes
+
 def lda_and_kmeans(inputs, classes, title, xlabel, ylabel, exec_lda = False):
     # Gets LDA data
     if exec_lda:
@@ -101,5 +111,9 @@ def ex4():
     # Run on Iris Dataset
     iris_dataset, classes = get_iris_dataset()
     lda_and_kmeans(iris_dataset, classes, "LDA + K-Means in IrisDatased", "DC1", "DC2", True)
+
+    wine_dataset, wine_classes = load_wine_data()
+    lda_and_kmeans(wine_dataset, wine_classes, "LDA + K-Means in WineDataset", "DC1", "DC2", True)
+
 
 
