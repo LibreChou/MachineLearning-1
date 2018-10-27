@@ -6,7 +6,6 @@ from exercises.ex4 import *
 
 def main():
      ex = int(input("Type the exercise number as an integer (e.g.: 1): "))
-     #ex = 4
 
      if ex == 1:
           ex1()

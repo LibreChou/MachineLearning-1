@@ -66,9 +66,7 @@ def plot_iris_exercise(array, classes, title, xlabel, ylabel):
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
 
-    # hide axis ticks
-    plt.tick_params(axis="both", which="both", bottom="off", top="off",
-                    labelbottom="on", left="off", right="off", labelleft="on")
+
     leg = plt.legend(loc='upper right', fancybox=True)
     leg.get_frame().set_alpha(0.5)
 
