@@ -151,7 +151,7 @@ class BayesNaive(object):
         # Applies Map Rule
         index = 0
         for i in range(1, len(probabilities)):
-            if probabilities[i] > probabilities[index]:
+            if probabilities[i][1] > probabilities[index][1]:
                 index = i
 
         # Returns class name and probability

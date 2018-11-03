@@ -24,3 +24,4 @@ The algorithms contained in this project are:
 - [x] Principal Components Analysis (PCA)
 - [x] Linear Discriminant Analysis (LDA)
 - [x] K-Means
+- [x] Naive Bayes Classifier
