@@ -4,13 +4,13 @@ import json
 from sklearn.naive_bayes import GaussianNB
 from exercises.ex4 import load_data
 
-def get_iris_dataset():
+def get_iris_dataset(path):
     # Fills inputs
     array = []
     classes = []
 
     # Reads and parse Json
-    with open("inputs/iris.json") as f:
+    with open(path) as f:
         data = json.load(f)
 
     # Apprend variables
@@ -58,6 +58,21 @@ def exec_experiment(data, classes, test_value, title, continuous=False):
 
     print()
 
+
+# Prints number of success and total
+def get_performance(data, classes, test_values, test_classes, continuous=False):
+    naive_bayes = BayesNaive(data, classes, continuous=continuous)
+    total = 0
+
+    for i in range(0, len(test_values)):
+        classification = test_classes[i]
+        prediction = naive_bayes.predict(test_values[i])[0]
+        if classification == prediction:
+            total += 1
+
+    print("Acertou " + str(total) + " de " + str(len(test_values)))
+
+
 def ex5():
     # Datasets
     tenis_dataset = [
@@ -91,21 +106,26 @@ def ex5():
     exec_experiment(dataset_ex1, classes_ex1, ["Mac"], "==== Ex1 ====")
 
     # Run on Iris Dataset
-    iris_dataset, iris_classes = get_iris_dataset()
+    iris_dataset, iris_classes = get_iris_dataset("inputs/iris_train.json")
+    iris_test, iris_test_classes = get_iris_dataset("inputs/iris_test.json")
     iris_dataset = np.matrix(iris_dataset).transpose().tolist()
-    exec_experiment(iris_dataset, iris_classes, [7.0, 3.3, 5.4, 0.3], "==== Iris Dataset ====", True)
+    iris_test = np.matrix(iris_test).transpose().tolist()
 
-    # Run on winde Dataset
-    wine_dataset, wine_classes = load_data("inputs/wine.txt")
+    print("==== Iris DataSet ====")
+    get_performance(iris_dataset, iris_classes, iris_test, iris_test_classes, True)
+
+    # Run on wine Dataset
+    wine_dataset, wine_classes = load_data("inputs/wine_train.txt")
+    wine_test, wine_test_classes = load_data("inputs/wine_test.txt")
     wine_dataset = np.matrix(wine_dataset).transpose().tolist()
-    exec_experiment(wine_dataset, wine_classes, [13.28, 1.64, 2.84, 25.5, 120, 2.8, 3.01, .34, 1.56, 4.0, 1.09, 2.78,
-                                                 910.0], "==== Wine Dataset 1 ====", True)
-    exec_experiment(wine_dataset, wine_classes, [12.99, 1.67, 2.6, 36.0, 119.0, 3.3, 2.70, .21, 1.56, 3.1, 1.31, 3.5,
-                                                 960.0], "==== Wine Dataset 2 ====", True)
+    wine_test = np.matrix(wine_test).transpose().tolist()
+    print("==== Wine DataSet ====")
+    get_performance(wine_dataset, wine_classes, wine_test, wine_test_classes, True)
 
     # Run on Abalone Dataset
-    abalone_dataset, abalone_classes = load_data("inputs/abalone.txt")
+    abalone_dataset, abalone_classes = load_data("inputs/abalone_train.txt")
+    abalone_test, abalone_test_classes = load_data("inputs/abalone_test.txt")
     abalone_dataset = np.matrix(abalone_dataset).transpose().tolist()
-    exec_experiment(abalone_dataset, abalone_classes, [0.425, 0.36, 0.087, 0.570, 0.2545, 0.112, 0.15, 9.0], "==== Abalone Dataset 1 - M ====", True)
-    exec_experiment(abalone_dataset, abalone_classes, [0.6, 0.42, 0.110, 0.635, 0.2065, 0.1115, 0.21, 9.3], "==== Abalone Dataset 2 - F ====", True)
-
+    abalone_test = np.matrix(abalone_test).transpose().tolist()
+    print("==== Abalone DataSet ====")
+    get_performance(abalone_dataset, abalone_classes, abalone_test, abalone_test_classes, True)

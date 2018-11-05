@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9be6966-dbfb-4dfb-b158-281c0bcba4de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/abalone_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/abalone_train.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/iris_test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/iris_train.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/wine_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/wine_train.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/ex5.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ex5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/BayesNaive.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/BayesNaive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,42 +61,45 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="7" />
+          <entry key="project.open.time.4" value="9" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="24" />
+          <entry key="json" value="25" />
           <entry key="md" value="1322" />
-          <entry key="py" value="22238" />
+          <entry key="py" value="23287" />
           <entry key="triang_surf" value="8" />
+          <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="JSON" value="25" />
           <entry key="Markdown" value="1322" />
-          <entry key="PLAIN_TEXT" value="32" />
-          <entry key="Python" value="22238" />
+          <entry key="PLAIN_TEXT" value="56" />
+          <entry key="Python" value="23287" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="json" value="3" />
+          <entry key="json" value="8" />
           <entry key="md" value="4" />
-          <entry key="py" value="26" />
+          <entry key="py" value="27" />
           <entry key="triang_surf" value="2" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="3" />
+          <entry key="JSON" value="8" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="26" />
+          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -149,28 +156,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="462">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/BayesNaive.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1558">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1541271844719" expanded="true" signature="57:58" ph="..." />
-                <marker date="1541271844719" expanded="true" signature="57:63" ph="..." />
-                <marker date="1541271844719" expanded="true" signature="578:790" ph="..." />
-                <marker date="1541271844719" expanded="true" signature="2096:2920" ph="..." />
-                <marker date="1541271844719" expanded="true" signature="3062:3468" ph="..." />
-                <marker date="1541271844719" expanded="true" signature="3538:4076" ph="..." />
               </folding>
             </state>
           </provider>
@@ -179,16 +168,59 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/ex5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="533">
+              <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1541275619878" expanded="true" signature="819:1804" ph="..." />
-                <marker date="1541275619878" expanded="true" signature="1159:1164" ph="..." />
-                <marker date="1541275619878" expanded="true" signature="1159:1804" ph="..." />
-                <marker date="1541275619878" expanded="true" signature="1829:1834" ph="..." />
-                <marker date="1541275619878" expanded="true" signature="2705:2706" ph="..." />
+                <marker date="1541445373300" expanded="true" signature="809:2272" ph="..." />
+                <marker date="1541445373300" expanded="true" signature="1149:1154" ph="..." />
+                <marker date="1541445373300" expanded="true" signature="1912:2272" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/wine_train.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="118" column="60" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="100" column="104" selection-start-line="100" selection-start-column="104" selection-end-line="100" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/iris_test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="50" column="104" selection-start-line="50" selection-start-column="104" selection-end-line="50" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/iris.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="70" column="60" selection-end-line="151" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/wine_test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -243,13 +275,20 @@
         <option value="$PROJECT_DIR$/library/BayesNaive.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/inputs/iris_train.txt" />
+        <option value="$PROJECT_DIR$/inputs/abalone_train.txt" />
+        <option value="$PROJECT_DIR$/inputs/abalone_test.txt" />
+        <option value="$PROJECT_DIR$/inputs/wine_train.txt" />
+        <option value="$PROJECT_DIR$/inputs/wine_test.txt" />
+        <option value="$PROJECT_DIR$/inputs/iris_test.json" />
+        <option value="$PROJECT_DIR$/inputs/iris_train.json" />
         <option value="$PROJECT_DIR$/exercises/ex5.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="326" />
-    <option name="y" value="103" />
+    <option name="x" value="165" />
+    <option name="y" value="51" />
     <option name="width" value="1231" />
     <option name="height" value="913" />
   </component>
@@ -372,7 +411,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.09641728" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.11696523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50054765" side_tool="true" weight="0.20275119" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -425,6 +464,11 @@
           <url>file://$PROJECT_DIR$/exercises/ex4.py</url>
           <line>86</line>
           <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/exercises/ex5.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -553,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/ex1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/ex3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -571,10 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-361">
           <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1540670876496" expanded="true" signature="340:648" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,20 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/iris.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="53" column="106" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/abalone.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -620,27 +639,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/wine.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="73" column="2" lean-forward="true" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/BayesNaive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1558">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="126">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <marker date="1541271844719" expanded="true" signature="57:58" ph="..." />
@@ -653,17 +655,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/ex1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/wine.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="88" column="21" selection-end-line="177" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/abalone_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="1367" column="46" lean-forward="true" selection-start-line="1367" selection-start-column="46" selection-end-line="1367" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/abalone_train.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="2783" column="44" selection-start-line="2783" selection-start-column="44" selection-end-line="2783" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/abalone.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/wine_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/iris.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="70" column="60" selection-end-line="151" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/iris_test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="50" column="104" selection-start-line="50" selection-start-column="104" selection-end-line="50" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="100" column="104" selection-start-line="100" selection-start-column="104" selection-end-line="100" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/wine_train.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="118" column="60" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/ex5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="533">
+          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1541275619878" expanded="true" signature="819:1804" ph="..." />
-            <marker date="1541275619878" expanded="true" signature="1159:1164" ph="..." />
-            <marker date="1541275619878" expanded="true" signature="1159:1804" ph="..." />
-            <marker date="1541275619878" expanded="true" signature="1829:1834" ph="..." />
-            <marker date="1541275619878" expanded="true" signature="2705:2706" ph="..." />
+            <marker date="1541445373300" expanded="true" signature="809:2272" ph="..." />
+            <marker date="1541445373300" expanded="true" signature="1149:1154" ph="..." />
+            <marker date="1541445373300" expanded="true" signature="1912:2272" ph="..." />
           </folding>
         </state>
       </provider>
