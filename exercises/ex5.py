@@ -2,7 +2,6 @@ from library.BayesNaive import BayesNaive
 import numpy as np
 import json
 from sklearn.naive_bayes import GaussianNB
-from exercises.ex4 import load_data
 
 def get_iris_dataset(path):
     # Fills inputs
