@@ -2,13 +2,40 @@ from library.NeuralNetwork import *
 from library.Neuron import *
 from library.Perceptron import *
 from exercises.ex5 import get_iris_dataset
+import json
 
+def get_iris_dataset(path):
+    # Fills inputs
+    array = []
+    classes = []
 
-def test_logic_port(rn, test_data, title):
+    # Reads and parse Json
+    with open(path) as f:
+        data = json.load(f)
+
+    for d in data:
+        if d["species"] == "setosa" or d["species"] == "versicolor":
+            classes.append(1) if d["species"] == "setosa" else classes.append(-1)
+            new_data = []
+            new_data.append(float(d["sepalLength"]))
+            new_data.append(float(d["sepalWidth"]))
+            new_data.append(float(d["petalLength"]))
+            new_data.append(float(d["petalWidth"]))
+            array.append(new_data)
+
+    return array, classes
+
+def test_logic_port(rn, test_data, title, print_res=True, labels = []):
     print(title)
-    for data in test_data:
-        value = str(rn.process(data)[0])
-        print("(" + str(data[0]) + "," + str(data[1]) + "): " + value)
+    sum = 0
+    for data in range(0, len(test_data)):
+        value = rn.process(test_data[data])[0]
+        if print_res:
+            print("(" + str(test_data[data][0]) + "," + str(test_data[data][1]) + "): " + str(value))
+        if len(labels) != 0 and value == labels[data]:
+            sum += 1
+    if len(labels) != 0:
+        print("Acertou: " + str(sum) + " de " + str(len(labels)))
 
 def ex6():
     # Test
@@ -27,8 +54,8 @@ def ex6():
 
     # Ex 1
     test_data = [[0, 0], [0, 1], [1, 0], [1, 1]]
-    test_labels = [0, 0, 0, 1]
-    test_labels_or = [0, 1, 1, 1]
+    test_labels = [-1, -1, -1, 1]
+    test_labels_or = [-1, 1, 1, 1]
 
     or_func = lambda x: 1 if x >= 2 else 0
     neurons_or = [Neuron([1, 1], or_func)]
@@ -47,35 +74,30 @@ def ex6():
     # Ex2
 
     # test 2
-    func_perceptron = lambda x: 1 if x > 0 else 0
+    func_perceptron = lambda x: 1 if x >= 0 else -1
 
     train_data = []
     train_labels = []
-    for i in range(0, 100):
+    for i in range(0, 200):
         index = random.randint(0, 3)
         train_data.append(test_data[index])
         train_labels.append(test_labels[index])
 
-    rn_test = Perceptron(func_perceptron, 2, 0.1, 0.15)
+    rn_test = Perceptron(func_perceptron, 2, 0.1, 0.10)
     rn_test.train(train_data, train_labels)
 
-    test_logic_port(rn_test, test_data, "==== Porta Lógica AND Perceptron ====")
-
-    for i in range(0, 100):
-        index = random.randint(0, 3)
-        train_data.append(test_data[index])
-        train_labels.append(test_labels_or[index])
-
-    rn_test_or = Perceptron(func_perceptron, 2, 0.1, 0.10)
-    rn_test_or.train(train_data, train_labels)
-    test_logic_port(rn_test_or, test_data, "==== Porta Lógica OR Perceptron ====")
-
     # Run on Iris Dataset
-    i# ris_dataset, iris_classes = get_iris_dataset("inputs/iris_train.json")
-    # iris_test, iris_test_classes = get_iris_dataset("inputs/iris_test.json")
-    # iris_dataset = np.matrix(iris_dataset).transpose().tolist()
-    # iris_test = np.matrix(iris_test).transpose().tolist()
+    iris_dataset, iris_classes = get_iris_dataset("inputs/iris.json")
+    iris_test, iris_test_classes = get_iris_dataset("inputs/iris_test.json")
 
-    # rn_iris = Perceptron(func_perceptron, 4, 0.1, 0.1)
-    # rn_iris.train(iris_dataset, iris_classes)
-    # test_logic_port(rn_iris, iris_test, "Teste iris")
+    p_iris_data = []
+    p_iris_classes = []
+
+    for i in range(0, len(iris_dataset) * 10):
+        index = random.randint(0, len(iris_dataset) - 1)
+        p_iris_data.append(iris_dataset[index])
+        p_iris_classes.append(iris_classes[index])
+
+    rn_iris = Perceptron(func_perceptron, 4, 0.1, 0.1)
+    rn_iris.train(p_iris_data, p_iris_classes)
+    test_logic_port(rn_iris, iris_test, "==== Teste iris =====", False, iris_test_classes)

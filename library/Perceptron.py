@@ -19,7 +19,6 @@ class Perceptron(NeuralNetwork):
         return label - result
 
     def learn(self, error, inputs):
-        delta = [0.0] * len(self.layers_mx[0])
 
         weights = self.layers[0][0].weights
 
