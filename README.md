@@ -25,3 +25,4 @@ The algorithms contained in this project are:
 - [x] Linear Discriminant Analysis (LDA)
 - [x] K-Means
 - [x] Naive Bayes Classifier
+- [x] Peceptron
