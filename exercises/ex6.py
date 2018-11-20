@@ -53,7 +53,7 @@ def ex6():
     # ==== Ex1 ====
     # Logic door dataset
     logic_dataset = [[0, 0], [0, 1], [1, 0], [1, 1]]
-
+    
     # OR
     or_func = lambda x: 1 if x >= 1 else 0
     p_or = Perceptron(or_func, 2, 0.1, 0.1)
@@ -80,4 +80,4 @@ def ex6():
     percep_func = lambda x: 1 if x >= 0 else -1
     rn_iris = Perceptron(percep_func, 4, 0.1, 0.1)
     rn_iris.train(p_iris_data, p_iris_classes)
-    test_perceptron(rn_iris, iris_test, "==== Test on Iris Dataset =====", True, iris_test_classes)
+    test_perceptron(rn_iris, iris_test, "==== Test on Iris Dataset =====", False, iris_test_classes)

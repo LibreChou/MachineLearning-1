@@ -31,6 +31,16 @@ def get_iris_dataset(path):
 
     return array, classes
 
+def load_data(filepath):
+    f = open(filepath, "r")
+    content = f.read()
+    content = content.split("\n")
+    content = [cont.split(",") for cont in content]
+    classes = [cont[0] for cont in content]
+    data = [[float(line[i]) for i in range(1, len(line))] for line in content]
+    data = np.matrix(data).transpose().tolist()
+    return data, classes
+
 def ex1_dataset():
     values = [["PC"], ["PC"], ["PC"], ["Mac"], ["Mac"], ["Mac"], ["Mac"], ["Mac"], ["PC"], ["Mac"]]
     classes = ["Android", "Android", "Android", "iPhone", "Android", "iPhone", "iPhone", "Android", "iPhone", "iPhone"]
