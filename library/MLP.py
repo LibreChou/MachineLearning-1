@@ -7,19 +7,18 @@ import random
 class MLP(NeuralNetwork):
 
     # Initial setup
-    def __init__(self, learn_rate, max_init_value, layers_number, neurons_per_layer):
+    def __init__(self, learn_rate, max_init_value, layers_number, input_size, neurons_per_layer):
         super().__init__(layers_number)
         self.learn_rate = learn_rate
         self.max_init_value = max_init_value
         f_ativ = lambda x: 1.0 / (1 + np.power(np.e, -x))
 
         for i in range(0, len(neurons_per_layer)):
-            neurons = []
-            for j in range(0, neurons_per_layer[i]):
-                neurons.append(Neuron([.0] * None))
-
-    def learn_for_layer(self, error, inputs, layer):
-        print("hi")
+            if i == 0:
+                neurons = [Neuron([.0] * input_size, f_ativ) for j in range(0, neurons_per_layer[i])]
+            else:
+                neurons = [Neuron([.0] * neurons_per_layer[i - 1], f_ativ) for j in range(0, neurons_per_layer[i])]
+            self.set_layer(i, neurons)
 
     def learn(self, error, inputs):
         error_mx = [None] * self.layers_number
@@ -78,10 +77,6 @@ class MLP(NeuralNetwork):
         if len(train_data) != len(labels):
             raise ValueError("Train and Label datasets must have equal elements count!!")
 
-        # Set weights with random values based on the maximum specified value
-        if init_weights:
-            self.init_random_weights()
-
         self.make_matrix()
 
         # Train for all samples in the training dataset
@@ -93,7 +88,7 @@ class MLP(NeuralNetwork):
             expected = labels[i]
             if result != expected:
                 # Calculates errors
-                error = self.calc_error(result, labels[i])
+                error = self.calc_error(result, expected)
                 # Learn from error
                 self.learn(error, train_data[i])
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9be6966-dbfb-4dfb-b158-281c0bcba4de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/ex7.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ex7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/MLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/MLP.py" afterDir="false" />
     </list>
@@ -66,7 +65,7 @@
           <entry key="gitignore" value="24" />
           <entry key="json" value="25" />
           <entry key="md" value="1339" />
-          <entry key="py" value="28104" />
+          <entry key="py" value="28599" />
           <entry key="triang_surf" value="8" />
           <entry key="txt" value="24" />
         </counts>
@@ -76,7 +75,7 @@
           <entry key="JSON" value="25" />
           <entry key="Markdown" value="1339" />
           <entry key="PLAIN_TEXT" value="56" />
-          <entry key="Python" value="28104" />
+          <entry key="Python" value="28599" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,7 +83,7 @@
           <entry key="gitignore" value="1" />
           <entry key="json" value="9" />
           <entry key="md" value="5" />
-          <entry key="py" value="36" />
+          <entry key="py" value="37" />
           <entry key="triang_surf" value="2" />
           <entry key="txt" value="17" />
         </counts>
@@ -94,7 +93,7 @@
           <entry key="JSON" value="9" />
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="36" />
+          <entry key="Python" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -149,11 +148,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/MLP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="160">
+              <caret line="77" column="89" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="89" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -161,13 +160,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/ex7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="53" />
+            <state relative-caret-position="223">
+              <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+                <marker date="1543102063542" expanded="true" signature="775:945" ph="..." />
               </folding>
             </state>
           </provider>
@@ -176,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="861">
               <caret line="41" column="21" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
@@ -207,6 +207,7 @@
       <find>get_continuous_class_probability</find>
       <find>self.variance</find>
       <find>process</find>
+      <find>print</find>
       <find>6.6</find>
     </findStrings>
   </component>
@@ -247,8 +248,8 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/exercises/ex6.py" />
-        <option value="$PROJECT_DIR$/exercises/ex7.py" />
         <option value="$PROJECT_DIR$/library/MLP.py" />
+        <option value="$PROJECT_DIR$/exercises/ex7.py" />
       </list>
     </option>
   </component>
@@ -432,8 +433,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/exercises/ex7.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="74" />
+          <line>52</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -675,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/NeuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -723,29 +717,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
+    <entry file="file://$PROJECT_DIR$/library/NeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/ex7.py">
+    <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="861">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/MLP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="160">
+          <caret line="77" column="89" selection-start-line="77" selection-start-column="89" selection-end-line="77" selection-end-column="89" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/ex7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1543102063542" expanded="true" signature="775:945" ph="..." />
           </folding>
         </state>
       </provider>
