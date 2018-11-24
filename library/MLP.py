@@ -7,10 +7,16 @@ import random
 class MLP(NeuralNetwork):
 
     # Initial setup
-    def __init__(self, learn_rate, max_init_value, layers_number):
+    def __init__(self, learn_rate, max_init_value, layers_number, neurons_per_layer):
         super().__init__(layers_number)
         self.learn_rate = learn_rate
         self.max_init_value = max_init_value
+        f_ativ = lambda x: 1.0 / (1 + np.power(np.e, -x))
+
+        for i in range(0, len(neurons_per_layer)):
+            neurons = []
+            for j in range(0, neurons_per_layer[i]):
+                neurons.append(Neuron([.0] * None))
 
     def learn_for_layer(self, error, inputs, layer):
         print("hi")
@@ -43,32 +49,10 @@ class MLP(NeuralNetwork):
                         delta = self.learn_rate * error_mx[i][j] * self.layers_output[i - 1][k][0]
                     else:
                         delta = self.learn_rate * error_mx[i][j] * inputs[k]
+                    self.layers[i][j].weights[k] += delta
 
-        print ("hi")
-
-        return
-        # Calculates error for hidden layers
-        for i in range(self.layers_number - 2, -1, -1):
-            new_error = []
-            for j in range(0, self.layers_mx[i].shape[0]):
-                sum = 0.0
-                for k in range(0, self.layers_mx[i + 1].shape[1]):
-                    sum += self.layers_mx[i+1].item(j, k) * error_mx[i + 1][j]
-                new_error.append(sum * self.layers_output[i][j][0] * (1 - self.layers_output[i][j][0]))
-            error_mx[i] = new_error
-
-        # Calculates new Weights for all layers
-        for i in range(self.layers_number - 1, -1, -1):
-            for j in range(0, self.layers_mx[i].shape[0]):
-                for k in range(0, len(self.layers[i][j].weights)):
-                    if i == 0:
-                        delta = self.learn_rate * error_mx[i][j] * inputs[j]
-                    else:
-                        delta = self.learn_rate * error_mx[i][j] * self.layers_output[i - 1][j][0] * self.layers[i][j].weights[k]
-                    new_theta = self.layers[i][j].weights[k] + delta
-                    self.layers[i][j].weights[k] = new_theta
-
-        print("hi")
+        # Recalculates Weight matrix
+        self.make_matrix()
 
     def init_random_weights(self):
         for i in range(0, self.layers_number):
@@ -81,7 +65,7 @@ class MLP(NeuralNetwork):
     @staticmethod
     def calc_error(result, expected):
         if len(result) != len(expected):
-            raise ValueError("Result and labels cannot have different length!!")
+             raise ValueError("Result and labels cannot have different length!!")
 
         error = []
         for i in range(0, len(result)):
@@ -106,7 +90,8 @@ class MLP(NeuralNetwork):
             result = self.process(train_data[i])
 
             # Update weights if result is different from the expected
-            if result != labels[i]:
+            expected = labels[i]
+            if result != expected:
                 # Calculates errors
                 error = self.calc_error(result, labels[i])
                 # Learn from error
