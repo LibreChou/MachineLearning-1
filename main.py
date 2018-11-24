@@ -4,11 +4,12 @@ from exercises.ex3 import *
 from exercises.ex4 import *
 from exercises.ex5 import *
 from exercises.ex6 import *
+from exercises.ex7 import *
 
 
 def main():
-    ex = int(input("Type the exercise number as an integer (e.g.: 1): "))
-
+    # ex = int(input("Type the exercise number as an integer (e.g.: 1): "))
+    ex = 7
     if ex == 1:
         ex1()
     elif ex == 2:
@@ -21,5 +22,7 @@ def main():
         ex5()
     elif ex == 6:
         ex6()
+    elif ex == 7:
+        ex7()
 
 main()
