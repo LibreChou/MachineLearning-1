@@ -7,7 +7,7 @@ import random
 class MLP(NeuralNetwork):
 
     # Initial setup
-    def __init__(self, name , learn_rate, max_init_value, input_size, neurons_per_layer, init_random_weigths=True):
+    def __init__(self, name , learn_rate, max_init_value, input_size, neurons_per_layer, init_random_weights=True):
         super().__init__(len(neurons_per_layer))
 
         # Properties setup
@@ -25,7 +25,7 @@ class MLP(NeuralNetwork):
             self.set_layer(i, neurons)
 
         # Initializes with random weights
-        if init_random_weigths:
+        if init_random_weights:
             self.init_random_weights()
 
     def learn(self, error, inputs):

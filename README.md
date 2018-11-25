@@ -26,3 +26,4 @@ The algorithms contained in this project are:
 - [x] K-Means
 - [x] Naive Bayes Classifier
 - [x] Perceptron
+- [x] Multi-Layer Perceptron (MLP)

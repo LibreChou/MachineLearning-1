@@ -22,6 +22,17 @@ def get_iris_dataset(path):
     return array, classes
 
 
+def load_data(filepath, labels):
+    f = open(filepath, "r")
+    content = f.read()
+    content = content.split("\n")
+    content = [cont.split(",") for cont in content]
+    classes = [cont[0] for cont in content]
+    classes = [[1 if c == label else 0 for label in labels] for c in classes]
+    data = [[float(line[i]) for i in range(1, len(line))] for line in content]
+    return data, classes
+
+
 def ex7():
 
     # Test many Topologies on Iris Data Set
@@ -36,5 +47,34 @@ def ex7():
     iris_data, iris_classes = shuffle_data(iris_data, iris_classes)
 
     # Gets the best model
+    print("==== Cross Validation for Iris Data Set ====")
     cross_validation(iris_data, iris_classes, [iris_1, iris_2, iris_3, iris_4, iris_5], 5000)
+    print()
 
+    # Test many Topologies on Wine Data Set
+    wine_1 = MLP("Wine: 3", 0.1, 0.1, 13, [3])
+    wine_2 = MLP("Wine: 4-3", 0.1, 0.1, 13, [8, 3])
+    wine_3 = MLP("Wine: 4-3-3", 0.1, 0.1, 13, [13, 4, 3])
+
+    # Gets data set
+    wine_data, wine_classes = load_data("inputs/wine.txt", ['1', '2', '3'])
+    wine_data, wine_classes = shuffle_data(wine_data, wine_classes)
+
+    # Gets the best model
+    print("==== Cross Validation for Wine Data Set ====")
+    cross_validation(wine_data, wine_classes, [wine_1, wine_2, wine_3], 5000)
+    print()
+
+    # Test many Topologies on Parkinson Data Set
+    pk_1 = MLP("Parkinson: 2", 0.1, 0.1, 22, [2])
+    pk_2 = MLP("Parkinson: 4-2", 0.1, 0.1, 22, [4, 2])
+    pk_3 = MLP("Parkinson: 22-2", 0.1, 0.1, 22, [22, 2])
+    pk_4 = MLP("Parkinson: 22-5-2", 0.1, 0.1, 22, [22, 5, 2])
+
+    pk_data, pk_classes = load_data("inputs/parkinson.txt", ['0', '1'])
+    pk_data, pk_classes = shuffle_data(pk_data, pk_classes)
+
+    # Gets the best model
+    print("==== Cross Validation for Parkinson Data Set ====")
+    cross_validation(pk_data, pk_classes, [pk_1, pk_2, pk_3, pk_4], 5000)
+    print()

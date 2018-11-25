@@ -9,9 +9,11 @@ def shuffle_data(data, classes):
 
     return data, classes
 
+
 def find_max_value_index(values):
     max_value = max(values)
     return values.index(max_value)
+
 
 def get_accuracy(rna, dataset, classes):
     # Gets it accuracy in validation dataset
@@ -20,15 +22,24 @@ def get_accuracy(rna, dataset, classes):
         result = rna.process(dataset[i])
 
         # Compares if result is correct
-        if find_max_value_index(result) == find_max_value_index(classes[i]):
+        max_value = max(result)
+
+        # Results bellow 65% confidence will be considered incorrect
+        if max_value < .65:
+            continue
+
+        # Checks if the answer is correct
+        if result.index(max_value) == find_max_value_index(classes[i]):
             acc += 1
 
     return float(acc) / float(len(dataset))
+
 
 def train_rna(rna, dataset, classes, epochs):
     for i in range(0, epochs):
         dataset, classes = shuffle_data(dataset, classes)
         rna.train(dataset, classes)
+
 
 def cross_validation(data, classes, rnas, epochs):
     last_index_train = int(len(data) / 2)
@@ -45,8 +56,8 @@ def cross_validation(data, classes, rnas, epochs):
     test_classes = [classes[i] for i in range(last_index_validation, last_index_test)]
 
 
-    accuracies = []
     # Validates RNA models
+    accuracies = []
     for rna in rnas:
         # Trains for validation dataset
         train_rna(rna, train_dataset, train_classes, epochs)
@@ -55,13 +66,13 @@ def cross_validation(data, classes, rnas, epochs):
         acc = get_accuracy(rna, validation_dataset, validation_classes)
         accuracies.append(acc)
 
-        print("RNA \"" + rna.name + "\" got an accuracy value in validation step of: " + str(acc))
+        print("RNA \"" + rna.name + "\" got an accuracy value in validation step of: %.2f" % acc)
 
     # Selects the best RNA
     best_rna = rnas[find_max_value_index(accuracies)]
 
     # Tests the best RNA in test dataset
     acc = get_accuracy(best_rna, test_dataset, test_classes)
-    print("The best RNA is \"" + rna.name + "\" with an accuracy value in test step of:" + str(acc))
+    print("The best RNA is \"" + best_rna.name + "\" with an accuracy value in test step of: %.2f" % acc)
 
     return best_rna
