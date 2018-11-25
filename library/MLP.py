@@ -7,18 +7,26 @@ import random
 class MLP(NeuralNetwork):
 
     # Initial setup
-    def __init__(self, learn_rate, max_init_value, layers_number, input_size, neurons_per_layer):
-        super().__init__(layers_number)
+    def __init__(self, name , learn_rate, max_init_value, input_size, neurons_per_layer, init_random_weigths=True):
+        super().__init__(len(neurons_per_layer))
+
+        # Properties setup
+        self.name = name
         self.learn_rate = learn_rate
         self.max_init_value = max_init_value
         f_ativ = lambda x: 1.0 / (1 + np.power(np.e, -x))
 
+        # Init layers according to specified in neurons_per_layer parameter
         for i in range(0, len(neurons_per_layer)):
             if i == 0:
                 neurons = [Neuron([.0] * input_size, f_ativ) for j in range(0, neurons_per_layer[i])]
             else:
                 neurons = [Neuron([.0] * neurons_per_layer[i - 1], f_ativ) for j in range(0, neurons_per_layer[i])]
             self.set_layer(i, neurons)
+
+        # Initializes with random weights
+        if init_random_weigths:
+            self.init_random_weights()
 
     def learn(self, error, inputs):
         error_mx = [None] * self.layers_number
@@ -72,7 +80,7 @@ class MLP(NeuralNetwork):
 
         return error
 
-    def train(self, train_data, labels, init_weights=False):
+    def train(self, train_data, labels):
         # Checks for parameters errors
         if len(train_data) != len(labels):
             raise ValueError("Train and Label datasets must have equal elements count!!")
