@@ -37,7 +37,7 @@ def get_accuracy(rna, dataset, classes):
 
 def train_rna(rna, dataset, classes, epochs):
     for i in range(0, epochs):
-        dataset, classes = shuffle_data(dataset, classes)
+        # dataset, classes = shuffle_data(dataset, classes)
         rna.train(dataset, classes)
 
 

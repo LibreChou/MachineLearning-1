@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9be6966-dbfb-4dfb-b158-281c0bcba4de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/inputs/parkinson.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/dota2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/ex7.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/ex7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/MLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/MLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/NeuralNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/RNA_Validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/RNA_Validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,12 +57,12 @@
     <session id="-542201853">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="5" />
-          <entry key="project.open.time.4" value="10" />
-          <entry key="project.open.time.5" value="4" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.open.time.4" value="12" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -70,36 +71,36 @@
           <entry key="json" value="25" />
           <entry key="md" value="1393" />
           <entry key="parkinson" value="1" />
-          <entry key="py" value="33182" />
+          <entry key="py" value="33864" />
           <entry key="triang_surf" value="8" />
-          <entry key="txt" value="34" />
+          <entry key="txt" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="25" />
           <entry key="Markdown" value="1393" />
-          <entry key="PLAIN_TEXT" value="67" />
-          <entry key="Python" value="33182" />
+          <entry key="PLAIN_TEXT" value="68" />
+          <entry key="Python" value="33864" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="json" value="11" />
+          <entry key="json" value="12" />
           <entry key="md" value="6" />
           <entry key="parkinson" value="1" />
-          <entry key="py" value="46" />
+          <entry key="py" value="53" />
           <entry key="triang_surf" value="2" />
-          <entry key="txt" value="21" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="11" />
+          <entry key="JSON" value="12" />
           <entry key="Markdown" value="6" />
-          <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="46" />
+          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="Python" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -157,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/MLP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1572">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="693">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -166,15 +167,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/ex7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+            <state relative-caret-position="118">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1543161621465" expanded="true" signature="581:982" ph="..." />
+                <marker date="1543695746107" expanded="true" signature="615:1016" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputs/wine.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -183,25 +202,16 @@
         <entry file="file://$PROJECT_DIR$/inputs/iris.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1176">
-              <caret line="56" column="106" lean-forward="true" selection-start-line="56" selection-start-column="106" selection-end-line="56" selection-end-column="106" />
+              <caret line="56" column="106" selection-start-line="56" selection-start-column="106" selection-end-line="56" selection-end-column="106" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inputs/parkinson.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="194" column="190" selection-start-line="194" selection-start-column="190" selection-end-line="194" selection-end-column="190" />
+            <state relative-caret-position="6468">
+              <caret line="309" selection-start-line="309" selection-end-line="309" />
             </state>
           </provider>
         </entry>
@@ -209,8 +219,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/NeuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="1008">
+              <caret line="49" selection-start-line="49" selection-end-line="77" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,31 +231,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/RNA_Validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="75" column="104" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
+            <state relative-caret-position="882">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
-                <marker date="1543161181320" expanded="true" signature="919:1047" ph="..." />
-                <marker date="1543161181320" expanded="true" signature="1097:1098" ph="..." />
-                <marker date="1543161181320" expanded="true" signature="1097:1102" ph="..." />
+                <marker date="1543685467669" expanded="true" signature="919:1049" ph="..." />
+                <marker date="1543685467669" expanded="true" signature="1099:1100" ph="..." />
+                <marker date="1543685467669" expanded="true" signature="1099:1104" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/ex5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inputs/iris_train.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -278,6 +273,9 @@
       <find>phon</find>
       <find>[0-9]$</find>
       <find>,$</find>
+      <find>Wine</find>
+      <find>shuffle</find>
+      <find>dota2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -312,22 +310,23 @@
         <option value="$PROJECT_DIR$/library/neuron.py" />
         <option value="$PROJECT_DIR$/exercises/ex5.py" />
         <option value="$PROJECT_DIR$/library/Neuron.py" />
-        <option value="$PROJECT_DIR$/library/NeuralNetwork.py" />
         <option value="$PROJECT_DIR$/library/Perceptron.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/exercises/ex6.py" />
-        <option value="$PROJECT_DIR$/library/MLP.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/inputs/parkinson" />
-        <option value="$PROJECT_DIR$/inputs/parkinson.txt" />
-        <option value="$PROJECT_DIR$/library/RNA_Validation.py" />
         <option value="$PROJECT_DIR$/inputs/wine.txt" />
+        <option value="$PROJECT_DIR$/library/RNA_Validation.py" />
+        <option value="$PROJECT_DIR$/library/NeuralNetwork.py" />
+        <option value="$PROJECT_DIR$/library/MLP.py" />
         <option value="$PROJECT_DIR$/exercises/ex7.py" />
+        <option value="$PROJECT_DIR$/inputs/parkinson.txt" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="x" value="-1482" />
+    <option name="y" value="41" />
     <option name="width" value="1440" />
     <option name="height" value="825" />
   </component>
@@ -357,26 +356,6 @@
             <path>
               <item name="Exercicios" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercicios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercicios" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercicios" type="462c0819:PsiDirectoryNode" />
-              <item name="exercises" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercicios" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercicios" type="462c0819:PsiDirectoryNode" />
-              <item name="inputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercicios" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercicios" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Exercicios" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Exercicios" type="462c0819:PsiDirectoryNode" />
-              <item name="snipets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -447,14 +426,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945235" visible="true" weight="0.08587988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50054765" side_tool="true" weight="0.20275119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928674" visible="true" weight="0.2733189" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928674" weight="0.27874187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22234273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -685,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/abalone.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inputs/wine_train.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
@@ -717,13 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
         </state>
       </provider>
     </entry>
@@ -779,52 +744,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/iris.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="56" column="106" lean-forward="true" selection-start-line="56" selection-start-column="106" selection-end-line="56" selection-end-column="106" />
+    <entry file="file://$PROJECT_DIR$/inputs/dota2.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="515">
+          <caret line="5275" column="23" selection-start-line="5275" selection-start-column="23" selection-end-line="5275" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/inputs/abalone.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/MLP.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1572">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="500" selection-start-line="500" selection-end-line="500" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/preprocessing/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1545" selection-start-line="1545" selection-end-line="1545" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="521" selection-start-line="521" selection-end-line="521" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inputs/parkinson.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="855">
           <caret line="194" column="190" selection-start-line="194" selection-start-column="190" selection-end-line="194" selection-end-column="190" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/NeuralNetwork.py">
+    <entry file="file://$PROJECT_DIR$/library/MLP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/RNA_Validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="75" column="104" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
+        <state relative-caret-position="693">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <marker date="1543161181320" expanded="true" signature="919:1047" ph="..." />
-            <marker date="1543161181320" expanded="true" signature="1097:1098" ph="..." />
-            <marker date="1543161181320" expanded="true" signature="1097:1102" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,18 +799,61 @@
     <entry file="file://$PROJECT_DIR$/inputs/wine.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/iris.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="56" column="106" selection-start-line="56" selection-start-column="106" selection-end-line="56" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6468">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/NeuralNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="49" selection-start-line="49" selection-end-line="77" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/RNA_Validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <marker date="1543685467669" expanded="true" signature="919:1049" ph="..." />
+            <marker date="1543685467669" expanded="true" signature="1099:1100" ph="..." />
+            <marker date="1543685467669" expanded="true" signature="1099:1104" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/ex7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="118">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1543161621465" expanded="true" signature="581:982" ph="..." />
+            <marker date="1543695746107" expanded="true" signature="615:1016" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

@@ -34,6 +34,7 @@ class MLP(NeuralNetwork):
         # Error for exposed layer
         error_mx[self.layers_number - 1] = []
 
+        # Sets error for output layer
         for i in range(0, len(error)):
             error_mx[self.layers_number - 1].append(error[i] * self.layers_output[self.layers_number - 1][i][0] *
                                                     (1 - self.layers_output[self.layers_number - 1][i][0]))
@@ -69,6 +70,7 @@ class MLP(NeuralNetwork):
                     weights.append(random.uniform(0.0, self.max_init_value))
                 neuron.weights = weights
 
+    # Calculates error for output layer
     @staticmethod
     def calc_error(result, expected):
         if len(result) != len(expected):
@@ -95,7 +97,7 @@ class MLP(NeuralNetwork):
             # Update weights if result is different from the expected
             expected = labels[i]
             if result != expected:
-                # Calculates errors
+                # Calculates error
                 error = self.calc_error(result, expected)
                 # Learn from error
                 self.learn(error, train_data[i])
