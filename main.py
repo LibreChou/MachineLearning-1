@@ -5,6 +5,7 @@ from exercises.ex4 import *
 from exercises.ex5 import *
 from exercises.ex6 import *
 from exercises.ex7 import *
+from exercises.ex8 import *
 
 
 def main():
@@ -24,5 +25,7 @@ def main():
         ex6()
     elif ex == 7:
         ex7()
+    elif ex == 8:
+        ex8()
 
 main()

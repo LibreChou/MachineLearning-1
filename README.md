@@ -27,3 +27,4 @@ The algorithms contained in this project are:
 - [x] Naive Bayes Classifier
 - [x] Perceptron
 - [x] Multi-Layer Perceptron (MLP)
+- [x] Convolutional Neural Networks (CNN)
